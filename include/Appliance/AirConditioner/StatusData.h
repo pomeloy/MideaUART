@@ -66,10 +66,10 @@ enum Preset : uint8_t {
 
 /// Enum for display light setting
 enum Display : uint8_t {
-/// Display is off
-DISPLAY_OFF=7,
-/// Display is on 
-DISPLAY_ON=0
+  /// Display is off
+  DISPLAY_OFF = 7,
+  /// Display is on
+  DISPLAY_ON = 0
 };
 
 class StatusData : public FrameData {
@@ -124,7 +124,7 @@ class StatusData : public FrameData {
   void setFahrenheits(bool state) { this->m_setMask(10, state, 4); }
 
   /* DISPLAY LIGHT */
-  Display getLight() const { return static_cast<Display>(this->m_getValue(14,7,4)); }
+  Display getLight() const { return static_cast<Display>(this->m_getValue(14, 7, 4)); }
 
  protected:
   /* POWER */
